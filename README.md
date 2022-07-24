@@ -1,7 +1,10 @@
 # PT4code 
 The repo of ESEC/FSE 2022 paper "No More Fine-Tuning? An Experimental Evaluation of Prompt Tuning in Code Intelligence"
 
-In this report, we upload all three tasks that can also be introduced in detail at CodeXGlue.
+In this report, we upload all three tasks that can also be introduced in detail at CodeXGlue. 
+
+You can design and experiment different prompt templates by yourself :).
+
 ## Defect Detection
 Firstly download the dataset.
 ```bash
@@ -35,7 +38,7 @@ wget https://s3.amazonaws.com/code-search-net/CodeSearchNet/v2/{LANG}.zip
 unzip {LANG}.zip
 python preprocess.py
 ```
-To fine-tune or prompt tuning CodeT5:
+To fine-tune or prompt tuning CodeT5 and try some different templates by yourself :)
 ```bash
 cd summarization
 python finetune_t5_gene.py --visible_gpu <GPU> --lang {LANG} --max_source_length 256 --max_target_length 128 --log_name=./log/{LANG}.log
